@@ -69,7 +69,7 @@ public class Main {
     public static void verificaContaCliente(ClientesNormal cl, int numeroCliente) {
 
         for (int i = 0; i < listaCliente.size(); i++) {
-            if (cl)
+
         }
 
 
@@ -206,7 +206,7 @@ public class Main {
             if (op.equalsIgnoreCase("POUPANCA")) {
                 //como qualquer cliente pode criar uma conta poupança .....
                 ClientesNormal a = listaCliente.get(numeroCliente);
-                ContaOrdem conta = new ContaOrdem(a.getnumCliente(), a.getnumConta(),0,"");//ESTA ERRADA ESTA LINHA
+                ContaOrdem conta = new ContaOrdem(a.getnumCliente());//ESTA ERRADA ESTA LINHA
                 listaConta.add(conta);
                 conta.toString();
                 System.out.println("Conta a Poupanca Criada!");
