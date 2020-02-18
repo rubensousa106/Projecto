@@ -64,6 +64,17 @@ public class Main {
 
     }
 
+    /***
+     * Verifica se o numero de Conta pertence ao Numero de Cliente
+     */
+    public static void verificaContaCliente(){
+        for (int i = 0; i<=0; i++){
+
+        }
+
+
+    }
+
 
 
     /***
