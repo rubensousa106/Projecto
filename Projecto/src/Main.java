@@ -45,7 +45,6 @@ public class Main {
             ClientesNormal cl2 = retornaCliente(numeroCliente2);
         }
 
-
         System.out.println("Introduza o montade que pretende depositar :");
         int montante = sc.nextInt();
 
@@ -53,7 +52,7 @@ public class Main {
             System.out.println("Montante Incorrecto ! Introduza de novo : ");
             montante = sc.nextInt();
         }
-        ;
+
         ClientesNormal mt = retornaCliente(numeroCliente);
         ClientesNormal mt2 = retornaCliente(numeroCliente2);
         mt.saldo = mt.saldo - montante;
@@ -67,9 +66,10 @@ public class Main {
     /***
      * Verifica se o numero de Conta pertence ao Numero de Cliente
      */
-    public static void verificaContaCliente(){
-        for (int i = 0; i<=0; i++){
+    public static void verificaContaCliente(ClientesNormal cl, int numeroCliente) {
 
+        for (int i = 0; i < listaCliente.size(); i++) {
+            if (cl)
         }
 
 
@@ -194,7 +194,7 @@ public class Main {
          sugestao minha : para criar conta, penso que nao seja preciso passar
          nada como argumento visto q o arraylist é estático
         */
-        /*
+
         System.out.println("***Criar Conta ***");
         System.out.println("\nIntroduza o numero de Cliente :");
         int numeroCliente = sc.nextInt();
@@ -211,9 +211,10 @@ public class Main {
                 conta.toString();
                 System.out.println("Conta a Poupanca Criada!");
             } else if (op.equalsIgnoreCase("INVESTIMENTO")) {
-                ClientesNormal a = listaCliente.get(numeroCliente);/*como apenas os VIPS podem criar
+                ClientesNormal a = listaCliente.get(numeroCliente);
+                /*como apenas os VIPS podem criar
 				é precisar criar uma verificaçao para o tipo de cliente
-
+                    */
                 if (a.getTipoCliente().equalsIgnoreCase("VIP")) {
                     System.out.println("**VIP**");
 
@@ -222,8 +223,8 @@ public class Main {
                 }
             }
         }
-*/
 
+        /* Tentativa de criar uma forma mais eficiente de criar uma conta !
         System.out.println("***Criar Conta ***");
         System.out.println("\nIntroduza o numero de Cliente :");
         int numeroCliente = sc.nextInt();
@@ -239,6 +240,8 @@ public class Main {
                 new ContaOrdem(a.getnumConta(),numeroCliente,"P",a,op);
             }
         }
+
+         */
     }
 
     /**
