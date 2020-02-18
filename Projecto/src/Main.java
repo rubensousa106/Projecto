@@ -10,8 +10,8 @@ public class Main {
     public final double COMISSAO_TRANSFERENCIA = 1.81;
     static GestorConta Maria = new GestorConta("Maria", 919133668, "maria@caixa.pt");
     // A Conta a ordem é criada quando se cria um novo cliente!
-    static ClientesVIP ze = new ClientesVIP(1, "ze", 917857812, "ze@gmail.com", "rapper", 12312312, 1, 500, Maria);
-    static ClientesVIP mario = new ClientesVIP(2, "mario", 917857812, "ze@hotmail.com", "carpinteiro", 12312312, 1, 500,
+    static ClientesVIP ze = new ClientesVIP(1, "ze", 917857812, "ze@gmail.com", "rapper", 123, 1, 500, Maria);
+    static ClientesVIP mario = new ClientesVIP(2, "mario", 917857812, "ze@hotmail.com", "carpinteiro", 1234, 1, 500,
             Maria);
     static ClientesNormal rs = new ClientesNormal(3, "rs", 111111111, "rs@gmail.com", "trolha", 412341, 1, 10000);
 
@@ -27,6 +27,9 @@ public class Main {
         int numeroCliente = sc.nextInt();
         if (verificaNumCliente(listaCliente, numeroCliente) == false) {
             System.out.println("Numero de Cliente incorrecto!");
+            //Introduza o numero da conta poupança (as contas poupanças vao estar indexadas , e vao ser incrementadas
+            //logo posso pedir atraves do objecto cliente e pedir o numero da conta poupança SE estiver o dinheiro na conta
+            //poupança.SENAO estiver, a transferencia é directa!!
             return;
         }else{
             ClientesNormal cl1 = retornaCliente(numeroCliente);
