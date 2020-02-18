@@ -17,15 +17,50 @@ public class Main {
 
     //nao podem ser criado clientes com numero de contas iguais
 
+    /***
+     * METODO DE TESTE DE TRANSFERENCIA !!
+     */
     public static void metodoTestes() {
-    
+        //Falta aplicar os juros e espaço temporal
+
+        System.out.println("Introduza o numero do Cliente do qual pretende fazer o Transferencia : ");
+        int numeroCliente = sc.nextInt();
+        if (verificaNumCliente(listaCliente, numeroCliente) == false) {
+            System.out.println("Numero de Cliente incorrecto!");
+            return;
+        }
+
+
+
+        System.out.println("Introduza o numero do Cliente para o qual pretende fazer o Transferencia : ");
+        int numeroCliente2 = sc.nextInt();
+        if ((verificaNumCliente(listaCliente, numeroCliente) == false) || numeroCliente == numeroCliente2) {
+            System.out.println("Numero de Cliente incorrecto!");
+            return;
+        }
+
+        System.out.println("Introduza o montade que pretende depositar :");
+        int montante = sc.nextInt();
+
+        while (montante <= 0) {
+            System.out.println("Montante Incorrecto ! Introduza de novo : ");
+            montante = sc.nextInt();
+        }
+        ;
+        ClientesNormal mt = retornaCliente(numeroCliente);
+        ClientesNormal mt2 = retornaCliente(numeroCliente2);
+        mt.saldo = mt.saldo - montante;
+        mt2.saldo = mt2.saldo + montante;
+        mt.SaldoActual();
+        System.out.println();
+        mt2.SaldoActual();
 
     }
 
-    ;
+
 
     /***
-     * metodo para transferencias
+     * metodo para transferencias (ESTA A SER CRIADO NO METODO DE TESTES!!)
      */
     public static void transferencia() {
         //Falta aplicar os juros e espaço temporal
@@ -242,6 +277,7 @@ public class Main {
      */
     public static ClientesNormal procuraPorNumero(ArrayList<ClientesNormal> listaCliente, int numeroCliente) {
         /*
+
         for (ClientesNormal clientes : Clientes) {
             if (clientes.getnumCliente() == numeroCliente) {
                 System.out.println("clientes : " + clientes.getnumCliente());
