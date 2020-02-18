@@ -28,16 +28,23 @@ public class Main {
         if (verificaNumCliente(listaCliente, numeroCliente) == false) {
             System.out.println("Numero de Cliente incorrecto!");
             return;
+        }else{
+            ClientesNormal cl1 = retornaCliente(numeroCliente);
         }
 
-
+        System.out.println("Introduza o numero de Conta :");
+        int numeroConta = sc.nextInt();
+        //Criar metodo para verificar se o numero de conta pertence ao numero de cliente
 
         System.out.println("Introduza o numero do Cliente para o qual pretende fazer o Transferencia : ");
         int numeroCliente2 = sc.nextInt();
         if ((verificaNumCliente(listaCliente, numeroCliente) == false) || numeroCliente == numeroCliente2) {
             System.out.println("Numero de Cliente incorrecto!");
             return;
+        }else{
+            ClientesNormal cl2 = retornaCliente(numeroCliente2);
         }
+
 
         System.out.println("Introduza o montade que pretende depositar :");
         int montante = sc.nextInt();
