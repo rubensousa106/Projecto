@@ -5,6 +5,14 @@ public class abstract Pessoa{
                 -NOME
                 -TELEFONE
                 -EMAIL
-
              */
+public String nome;
+public int telefone;
+public String email;
+
+public Pessoa(String nome,int telefone,String email){
+        this.nome=nome;
+        this.Telefone=telefone;
+        this.Email=email;
+        }
         }
