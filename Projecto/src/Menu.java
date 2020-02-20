@@ -24,6 +24,7 @@ public class Menu {
                     break;
                 case 2:
                     Main.listaCliente();
+                    //
                     break;
                 case 3:
                     Menu.opccaoCliente();
