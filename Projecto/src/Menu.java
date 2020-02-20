@@ -21,6 +21,7 @@ public class Menu {
             switch (opcao) {
                 case 1:
                     Main.criaCliente();
+                    //
                     break;
                 case 2:
                     Main.listaCliente();
