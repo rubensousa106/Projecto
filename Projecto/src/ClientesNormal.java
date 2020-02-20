@@ -10,7 +10,7 @@ public class ClientesNormal {
     protected String Profissao;
     protected int numConta;
     protected int Cartoes;
-    protected double saldo;
+    protected double saldo; //UM CLIENTE NAO TEM SALDO, UMA CONTA É Q TEM SALDO ! ELIMINAR ESTA LINHA
 
     public ClientesNormal(int numCliente, String nome, int telefone, String email, String profissao, int numConta,
                           int cartoes, int saldo) {
