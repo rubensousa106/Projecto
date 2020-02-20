@@ -30,6 +30,10 @@ public class Main {
             //Introduza o numero da conta poupança (as contas poupanças vao estar indexadas , e vao ser incrementadas
             //logo posso pedir atraves do objecto cliente e pedir o numero da conta poupança SE estiver o dinheiro na conta
             //poupança.SENAO estiver, a transferencia é directa!!
+            System.out.println("Introduza o numero de conta ");
+            int numeroConta = sc.nextInt();
+
+
             return;
         }else{
             ClientesNormal cl1 = retornaCliente(numeroCliente);
@@ -64,6 +68,15 @@ public class Main {
         System.out.println();
         mt2.SaldoActual();
 
+    }
+
+    /***
+     * metodo para verificar Tipo de Conta
+     * @return
+     */
+    public static boolean verificaTipoConta() {
+
+        return false;
     }
 
     /***
