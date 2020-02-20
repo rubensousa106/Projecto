@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class ClientesNormal {
+public class ClientesNormal extends Pessoa {
 
     protected String TipoCliente;
     protected int numCliente; //ESTE NUMERO VAI SER INVISIVEL E NAO PODE SER PERGUNTADO AO UTILIZADOR
@@ -12,18 +12,21 @@ public class ClientesNormal {
     protected int Cartoes;
     protected double saldo; //UM CLIENTE NAO TEM SALDO, UMA CONTA É Q TEM SALDO ! ELIMINAR ESTA LINHA
 
-    public ClientesNormal(int numCliente, String nome, int telefone, String email, String profissao, int numConta,
+    public ClientesNormal(int numCliente, String profissao, int numConta,
                           int cartoes, int saldo) {
+        super(nome, telefone, email);
         this.TipoCliente = "NORMAL";
         this.numCliente = numCliente;
+        /*
         this.Nome = nome;
         this.Telefone = telefone;
         this.Email = email;
+        */
         this.Profissao = profissao;
         this.numConta = numConta;
         this.Cartoes = cartoes;
         this.saldo = saldo;
-        //
+
     }
 
     public String getNome() {

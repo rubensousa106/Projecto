@@ -1,13 +1,17 @@
-public class GestorConta {
+public class GestorConta extends Pessoa {
 
     private String nome;
     private int Telefone;
     private String Email;
 
-    public GestorConta(String nome, int telefone, String email) {
+    public GestorConta() {
+        super(nome, telefone, email);
+        /*
         this.nome = nome;
         this.Telefone = telefone;
         this.Email = email;
+
+         */
     }
 
     @Override
