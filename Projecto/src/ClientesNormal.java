@@ -23,6 +23,7 @@ public class ClientesNormal {
         this.numConta = numConta;
         this.Cartoes = cartoes;
         this.saldo = saldo;
+        //
     }
 
     public String getNome() {
